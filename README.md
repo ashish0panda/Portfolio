@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Ashish Kumar Panda - Developer Portfolio
 
-## Project info
+This is the source code for my personal developer portfolio, showcasing my skills, projects, and professional experience. The portfolio is built with modern web technologies and is designed to be clean, responsive, and performant.
 
-**URL**: https://lovable.dev/projects/3ba85d67-bd5e-45d0-ab3b-bc846248c193
+## ✨ Features
 
-## How can I edit this code?
+- **Responsive Design:** Fully functional and visually appealing on all devices, from mobile phones to desktops.
+- **Interactive UI:** Smooth animations and transitions to enhance user experience.
+- **Dynamic Content:** Sections for showcasing projects, skills, experience, and contact information.
+- **Contact Form:** Integrated with EmailJS to send messages directly to my inbox.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Framework:** [React](https://reactjs.org/) via [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Email Service:** [EmailJS](https://www.emailjs.com/)
+- **Deployment:** (You can add your hosting provider here, e.g., Vercel, Netlify)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3ba85d67-bd5e-45d0-ab3b-bc846248c193) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+To get a local copy up and running, follow these simple steps.
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [Node.js](https://nodejs.org/en/) (v18 or later recommended)
+- [npm](https://www.npmjs.com/)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd your-repo-name
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+### Running the Development Server
+
+To view the project in your browser, run the following command:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+This will start the development server, and you can view the portfolio at `http://localhost:5173` (or another port if 5173 is in use).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Configuration
 
-**Use GitHub Codespaces**
+The contact form uses **EmailJS** to handle email sending. To make it work, you need to add your own EmailJS credentials.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1.  Sign up for a free account at [EmailJS.com](https://www.emailjs.com/).
+2.  Get your **Service ID**, **Template ID**, and **Public Key**.
+3.  Open `src/components/Contact.tsx` and replace the placeholder values with your credentials.
 
-## What technologies are used for this project?
+```typescript
+// src/components/Contact.tsx
 
-This project is built with:
+emailjs.sendForm(
+  "YOUR_SERVICE_ID",
+  "YOUR_TEMPLATE_ID",
+  form.current,
+  "YOUR_PUBLIC_KEY"
+)
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🤝 Contributing
 
-## How can I deploy this project?
+This is a personal project, but I'm open to suggestions and feedback! If you have any ideas for improvement, feel free to open an issue or submit a pull request.
 
-Simply open [Lovable](https://lovable.dev/projects/3ba85d67-bd5e-45d0-ab3b-bc846248c193) and click on Share -> Publish.
+## 📄 License
 
-## Can I connect a custom domain to my Lovable project?
+This project is open source and available under the [MIT License](LICENSE).
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+_This README was generated with assistance from an AI tool._

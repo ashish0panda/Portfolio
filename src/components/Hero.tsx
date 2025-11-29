@@ -24,19 +24,18 @@ const Hero = () => {
             <p className="text-primary font-display text-lg mb-4 tracking-wider uppercase">
               Developer
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="text-gradient glow whitespace-nowrap">Ashish Kumar Panda</span>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+              Hi, I'm <span className="text-gradient glow">Ashish Kumar Panda</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I craft beautiful, functional web experiences with modern technologies. 
-              Specializing in React, TypeScript, and full-stack development.
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              I build smooth, high-performance Android applications with a strong focus on reliability and modern design. As an IITian with deep technical foundations, I combine engineering excellence with practical problem-solving to create impactful and scalable digital experiences.
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-6 justify-center animate-fade-in-delay">
             <a
-              href="https://github.com"
+              href="https://github.com/ashish0panda"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2"
@@ -45,7 +44,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ashish-kumar-panda-847307216/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2"
@@ -54,7 +53,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:ashishkumar.official802@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors p-2"
               aria-label="Email Contact"
             >

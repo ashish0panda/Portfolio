@@ -1,35 +1,56 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
+import MTTS from "@/assets/MTTS.png";
+import prodify from "@/assets/Prodify.png";
+import compressor from "@/assets/compressor.png";
+import DSA from "@/assets/DSA.png"
+import quiz from  "@/assets/quiz.jpg"
 
 const projects = [
   {
-    title: "Analytics Dashboard",
-    description: "A comprehensive analytics platform with real-time data visualization, custom reports, and team collaboration features.",
-    image: project1,
-    tags: ["React", "TypeScript", "D3.js", "Node.js"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "Live BPM From Camera",
+    description: "This project implements a real-time heart rate (BPM) detection system that analyzes a live video feed from a webcam. It uses a sophisticated deep learning model to detect subtle photoplethysmography (PPG) signals from a person's face and translates them into an accurate BPM reading.",
+    image: MTTS,
+    tags: ["Python", "HTML", "MTTS-CAN", "rPPG","AI","Deep Learning"],
+    github: "https://github.com/ashish0panda/MTTS-CAN-Live",
+    live: " https://huggingface.co/spaces/ashishSitu/MTTS-CAN",
   },
   {
-    title: "E-Commerce Platform",
-    description: "Modern e-commerce solution with advanced filtering, payment integration, and inventory management system.",
-    image: project2,
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "Prodify - Android Productivity App",
+    description: "Prodify is a modern Android application built with Jetpack Compose that serves as a foundation for a productivity and tracking tool. It features a complete user authentication system using Firebase, supporting both traditional email/password and modern Google Sign-In methods.",
+    image: prodify,
+    tags: ["Kotlin", "XML", "Firebase", "Andriod"],
+    github: "https://github.com/Dangling-Pointers-PGSL/Prodify",
+    live: "https://drive.google.com/drive/folders/1GQ7I6jO51Y7EftrrF8_9qpsqqaoFSlf5?usp=sharing",
   },
   {
-    title: "Mobile App Design",
-    description: "Cross-platform mobile application with beautiful UI/UX, offline support, and seamless cloud synchronization.",
-    image: project3,
-    tags: ["React Native", "Firebase", "Redux", "Expo"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "File Compressor",
+    description: "A small full-stack project that lets users upload one or more files from a browser, compresses each file server-side using a native C++ compressor binary, and returns a single ZIP containing the compressed outputs.",
+    image: compressor,
+    tags: ["HTML","CSS", "Javascript", "Huffman"],
+    github: "https://github.com/ashish0panda/Web-based-file-compressor",
+    live: "https://file-compressor-e43136493fba.herokuapp.com/",
   },
+    {
+        title: "DSA Visualizer",
+        description: "A web-based Data Structures & Algorithms Visualizer that helps learners see how algorithms work in real-time.\n" +
+            "It covers Sorting, Searching, Graph Traversal, and Recursion/Backtracking with interactive animations, making it easier to understand step-by-step execution.",
+        image: DSA,
+        tags: ["HTML","CSS", "Javascript", "DSA"],
+        github: "https://github.com/ashish0panda/DSA-Visualizer",
+        live: "https://ashish-dsa.netlify.app/",
+    },
+    {
+        title: "Quiz Application",
+        description: "Quiz Application is an engaging Android app where users can play quizzes from various categories and earn points.\n" +
+            "It provides a fun and interactive way to test your knowledge, track your scores, and compete with others on the leaderboard.\n" +
+            "You can register, log in, play quizzes, share your results, and manage your profile — all in one place!",
+        image: quiz,
+        tags: ["Java", "XML", "Firebase", "Andriod"],
+        github: "https://github.com/ashish0panda/QuizApp",
+        live: "https://drive.google.com/file/d/1STMXM4BTywkSX66eOc-O2wU0rW12qR-m/view?usp=sharing",
+    },
 ];
 
 const Projects = () => {
@@ -41,7 +62,7 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A selection of recent work showcasing my expertise in full-stack development
+            A selection of recent work showcasing my expertise in development
           </p>
         </div>
 

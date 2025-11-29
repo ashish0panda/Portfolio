@@ -18,6 +18,7 @@ const Navigation = () => {
     { href: "#home", label: "Home" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
+    { href: "#experience", label: "Experience" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -66,8 +67,14 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="font-display">
-              Resume
+            <Button asChild size="sm" className="font-display">
+              <a
+                href="https://drive.google.com/file/d/1c075SXMUBh_LY__TNKI__0VmvKqaDBdg/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -99,7 +106,15 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="px-4">
-                <Button className="w-full font-display">Resume</Button>
+                <Button asChild className="w-full font-display">
+                  <a
+                    href="https://drive.google.com/file/d/1c075SXMUBh_LY__TNKI__0VmvKqaDBdg/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Resume
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

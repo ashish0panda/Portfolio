@@ -1,26 +1,26 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Database, Layout, Server } from "lucide-react";
+import {Code, Code2, Database, Frame} from "lucide-react";
 
 const skillCategories = [
   {
-    icon: <Layout className="w-8 h-8" />,
-    title: "Frontend Development",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
+    icon: <Code className="w-8 h-8" />,
+    title: "Programming Languages",
+    skills: ["Java", "C", "C++", "Python", "HTML", "CSS", "JavaScript","Kotlin"],
   },
   {
-    icon: <Server className="w-8 h-8" />,
-    title: "Backend Development",
-    skills: ["Node.js", "Express", "REST APIs", "GraphQL", "Microservices"],
+    icon: <Frame className="w-8 h-8" />,
+    title: "Frameworks / Libraries",
+    skills: ["Spring", "Spring Boot", "Android SDK", "REST", "SOAP"],
   },
   {
     icon: <Database className="w-8 h-8" />,
     title: "Database & Cloud",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "AWS", "Docker"],
+    skills: ["MySQL", "AWS", "Firebase Realtime Database"],
   },
   {
     icon: <Code2 className="w-8 h-8" />,
     title: "Tools & Practices",
-    skills: ["Git", "CI/CD", "Testing", "Agile", "Code Review"],
+    skills: ["VS Code", "Android Studio", "Firebase", "Oracle Cloud (OCI)", "VBCS", "Docker", "Git"],
   },
 ];
 

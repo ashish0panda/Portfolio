@@ -1,10 +1,38 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_pv5k6k5",
+          "template_zh8odma",
+          form.current,
+          "BkChVQmOM6MhBbaQQ"
+        )
+        .then(
+          () => {
+            alert("Message sent successfully!");
+            form.current?.reset();
+          },
+          (error) => {
+            alert("Failed to send message, please try again.");
+            console.error("EmailJS error:", error.text);
+          }
+        );
+    }
+  };
+
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-secondary/30">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
@@ -16,7 +44,7 @@ const Contact = () => {
         </div>
 
         <Card className="p-8 md:p-12 bg-card border-border">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
@@ -35,8 +63,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:alex@example.com" className="font-medium">
-                      alex@example.com
+                    <a href="mailto:ashishkumar.official802@gmail.com" className="font-medium break-all">
+                        ashishkumar.official802@gmail.com
                     </a>
                   </div>
                 </div>
@@ -47,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">San Francisco, CA</p>
+                    <p className="font-medium">IIT Ropar, India</p>
                   </div>
                 </div>
               </div>
@@ -57,7 +85,7 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">Follow me on</p>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/ashish0panda"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-lg"
@@ -66,7 +94,7 @@ const Contact = () => {
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/ashish-kumar-panda-847307216/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-lg"
@@ -79,7 +107,7 @@ const Contact = () => {
             </div>
 
             {/* Quick Contact Form */}
-            <div className="space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Name
@@ -87,8 +115,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="user_name"
                   className="w-full px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your name"
+                  required
                 />
               </div>
               <div>
@@ -98,8 +128,10 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="user_email"
                   className="w-full px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="your.email@example.com"
+                  required
                 />
               </div>
               <div>
@@ -108,15 +140,17 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Your message..."
+                  required
                 />
               </div>
-              <Button className="w-full font-display">
+              <Button type="submit" className="w-full font-display">
                 Send Message
               </Button>
-            </div>
+            </form>
           </div>
         </Card>
       </div>
