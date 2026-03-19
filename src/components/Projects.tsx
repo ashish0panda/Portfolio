@@ -6,6 +6,7 @@ import prodify from "@/assets/Prodify.png";
 import compressor from "@/assets/compressor.png";
 import DSA from "@/assets/DSA.png"
 import quiz from  "@/assets/quiz.jpg"
+import task from "@/assets/Task.jpg"
 
 const projects = [
   {
@@ -20,7 +21,7 @@ const projects = [
     title: "Prodify - Android Productivity App",
     description: "Prodify is a modern Android application built with Jetpack Compose that serves as a foundation for a productivity and tracking tool. It features a complete user authentication system using Firebase, supporting both traditional email/password and modern Google Sign-In methods.",
     image: prodify,
-    tags: ["Kotlin", "XML", "Firebase", "Andriod"],
+    tags: ["Kotlin", "XML", "Firebase", "Android"],
     github: "https://github.com/Dangling-Pointers-PGSL/Prodify",
     live: "https://drive.google.com/drive/folders/1GQ7I6jO51Y7EftrrF8_9qpsqqaoFSlf5?usp=sharing",
   },
@@ -47,10 +48,20 @@ const projects = [
             "It provides a fun and interactive way to test your knowledge, track your scores, and compete with others on the leaderboard.\n" +
             "You can register, log in, play quizzes, share your results, and manage your profile — all in one place!",
         image: quiz,
-        tags: ["Java", "XML", "Firebase", "Andriod"],
+        tags: ["Java", "XML", "Firebase", "Android"],
         github: "https://github.com/ashish0panda/QuizApp",
         live: "https://drive.google.com/file/d/1STMXM4BTywkSX66eOc-O2wU0rW12qR-m/view?usp=sharing",
     },
+    {
+        title: "Todo List",
+        description: "A minimal and user-friendly Android app built with Kotlin to simplify daily task management, initially created for personal use and later adopted by IITian peers for its clean design.\n"+
+                "Uses Room Database for efficient local storage and supports task creation, deletion, completion tracking, and priority management.\n"+
+                "Despite its simplicity, the app emphasizes strong usability and clean architecture.",
+        image: task,
+        tags: ["Kotlin", "ROOM Storage", "Android"],
+        github: "https://github.com/ashish0panda/todo-app",
+        live: "https://drive.google.com/drive/folders/1Cp0Xr5brtb_blHkN3do7ChmMslfUJJa-?usp=sharing",
+    }
 ];
 
 const Projects = () => {
@@ -73,13 +84,21 @@ const Projects = () => {
               className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video bg-muted/20">
+                {/* Blurred background */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center blur-xl opacity-50 scale-110" 
+                  style={{ backgroundImage: `url(${project.image})` }}
+                />
+                
+                {/* Foreground image with object-contain */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4 gap-4">
+                
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4 gap-4">
                   <a
                     href={project.github}
                     target="_blank"
@@ -106,7 +125,7 @@ const Projects = () => {
                 <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed whitespace-pre-line">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

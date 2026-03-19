@@ -69,7 +69,7 @@ const Navigation = () => {
             ))}
             <Button asChild size="sm" className="font-display">
               <a
-                href="https://drive.google.com/file/d/1c075SXMUBh_LY__TNKI__0VmvKqaDBdg/view?usp=sharing"
+                href="https://drive.google.com/file/d/19c1UVvo5Z9VX4m2p1POPchJQJVzda5tx/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -108,7 +108,7 @@ const Navigation = () => {
               <div className="px-4">
                 <Button asChild className="w-full font-display">
                   <a
-                    href="https://drive.google.com/file/d/1c075SXMUBh_LY__TNKI__0VmvKqaDBdg/view?usp=sharing"
+                    href="https://drive.google.com/file/d/19c1UVvo5Z9VX4m2p1POPchJQJVzda5tx/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
